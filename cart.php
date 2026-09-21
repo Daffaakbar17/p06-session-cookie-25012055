@@ -45,6 +45,26 @@ require __DIR__ . '/components/header.php';
 
             <?php foreach ($cart as $id => $quantity): ?>
 
+    <?php
+    $id = filter_var($id, FILTER_VALIDATE_INT);
+
+    if ($id === false || !isset($products[$id])) {
+        continue;
+    }
+
+    $quantity = filter_var($quantity, FILTER_VALIDATE_INT);
+
+    if ($quantity === false || $quantity <= 0) {
+        continue;
+    }
+    ?>
+
+    <?php
+    $product = $products[$id];
+    $subtotal = $product['harga'] * $quantity;
+    $total += $subtotal;
+    ?>
+
                 <?php if (!isset($products[$id])) {
                     continue;
                 } ?>
