@@ -88,7 +88,7 @@ Cookie tidak digunakan untuk menyimpan password, token, atau data sensitif.
 ## GitHub
 
 Repository:
-ISI LINK GITHUB
+https://github.com/Daffaakbar17/p06-session-cookie-25012055.git
 
 ## Kesimpulan
 
